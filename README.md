@@ -11,7 +11,7 @@ If you're looking to learn how to make a KubeJS Addon, well you're not *really* 
 #
 ### Basic how-to
 
-**1.** Download the Mod
+**1.** Download the Mod             
 You can use this repo's Template feature to make a new repo for yourself,
 Or you can clone it using your terminal:    
 `git clone --branch minecraftversion https://github.com/FooterMan15/ExampleKubeJSAddon`   
