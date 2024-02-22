@@ -2,7 +2,7 @@
 Basically just a quick mod template for KubeJS Addon Mods. I got annoyed setting up new mods for Kube so often, so thats why I made it. Yeah, I'll add more versions later.
 If you're looking to learn how to make a KubeJS Addon, well you're not *really* in the right place, but I'll help you with the basics.
 
-* Uses Loom - 1.3
+* Uses Arch Loom - 1.3 🧵️
 * MC Version 1.20.1 - Forge 47.2.1 🔨️
 * Kube Version - 6.4-build.138 🟪️
 * Rhino Version - 2.2-build.18 🦏️
