@@ -11,14 +11,14 @@ If you're looking to learn how to make a KubeJS Addon, well you're not *really* 
 #
 ### Basic how-to
 
-**1.** Download the Mod             
+**1. Download the Mod**             
 You can use this repo's Template feature to make a new repo for yourself,
 Or you can clone it using your terminal:    
 `git clone --branch minecraftversion https://github.com/FooterMan15/ExampleKubeJSAddon`   
 `minecraftversion` being 1.20.1, 1.19.2, etc. I only have 1.20.1 on here right now.         
 If you do clone with your terminal, you can remove the `.git` directory from the mod to initialize your own Github repository.
 
-**2.** Open with your favorite Integrated Development Environment (IDE)          
+**2. Open with your favorite Integrated Development Environment (IDE)**          
 For IntelliJ IDEA, it should be as simple as opening the cloned mod folder, and it will build and index for you.       
 For VSCode, you have to open the cloned mod folder, and run gradle task `vscode`. Then you're good.       
 For Eclipse... ehh not really sure, but there is a gradle task for eclipse, called `eclipse`.      
