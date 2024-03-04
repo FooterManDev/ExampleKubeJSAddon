@@ -19,9 +19,9 @@ Or you can clone it using your terminal:
 If you do clone with your terminal, you can remove the `.git` directory from the mod to initialize your own Github repository.
 
 **2. Open with your favorite Integrated Development Environment (IDE)**          
-For IntelliJ IDEA, it should be as simple as opening the cloned mod folder, and it will build and index for you.       
-For VSCode, you have to open the cloned mod folder, and run gradle task `vscode`. Then you're good.       
-For Eclipse... ehh not really sure, but there is a gradle task for eclipse, called `eclipse`.      
+* For IntelliJ IDEA, open the cloned mod folder, and run gradle task `ideaSyncTask` to generate run configurations for IDEA. Alternatively you can just use gradle task `runClient`.  
+* For VSCode, you have to open the cloned mod folder, and run gradle task `vscode`. Then you're good.       
+* For Eclipse... ehh not really sure, but there is a gradle task for eclipse, called `eclipse`.      
 From then on you can run `runClient` to launch the game.      
 
 #
