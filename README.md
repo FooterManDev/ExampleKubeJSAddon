@@ -12,17 +12,19 @@ If you're looking to learn how to make a KubeJS Addon, well you're not *really* 
 ### Basic how-to
 
 **1. Download the Mod**             
-You can use this repo's Template feature to make a new repo for yourself,
-Or you can clone it using your terminal:    
+* You can use this repo's Template feature to make a new repo for yourself,
+or you can clone it using your terminal:    
 `git clone --branch minecraftversion https://github.com/FooterMan15/ExampleKubeJSAddon`   
-`minecraftversion` being 1.20.1, 1.19.2, etc, plus modloader. I only have 1.20.1 Forge on here right now.         
-If you do clone with your terminal, you can remove the `.git` directory from the mod to initialize your own Github repository.
+`minecraftversion` being 1.20.1, 1.19.2, etc, plus modloader. I only have 1.20.1 Forge on here right now.
+
+Alternatively if you use an IDE that supports generating projects from templates, you can clone it that way.
+
+After cloning, you can remove the `.git` directory from the mod to initialize your own Github repository.
 
 **2. Open with your favorite Integrated Development Environment (IDE)**          
-* For IntelliJ IDEA, open the cloned mod folder, and run gradle task `ideaSyncTask` to generate run configurations for IDEA. Alternatively you can just use gradle task `runClient`.  
-* For VSCode, you have to open the cloned mod folder, and run gradle task `vscode`. Then you're good.       
-* For Eclipse... ehh not really sure, but there is a gradle task for eclipse, called `eclipse`.      
-From then on you can run `runClient` to launch the game.      
+* For IntelliJ IDEA, open the cloned mod folder, and run gradle task `ideaSyncTask` to generate run configurations for IDEA. Alternatively you can run gradle task `runClient` to start the game.    
+* For VSCode, you have to open the cloned mod folder, and run gradle task `vscode` to generate launch tasks for VSCode. Alternatively you can run gradle task `runClient` to start the game.      
+* For Eclipse... ehh not really sure, but there is a gradle task for eclipse, called `eclipse`. I have no further info.
 
 #
 
