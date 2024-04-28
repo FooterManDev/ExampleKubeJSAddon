@@ -24,8 +24,7 @@ Alternatively if you use an IDE that supports generating projects from templates
 After cloning, you can remove the `.git` directory from the mod to initialize your own Github repository.
 
 **2. Open with your favorite Integrated Development Environment (IDE)**          
-* For IntelliJ IDEA, open the cloned mod folder, and run gradle task `ideaSyncTask` to generate run configurations for IDEA. Alternatively you can run gradle task `runClient` to start the game. 
-**Note**: This may not work currently with Loom 1.5!
+* For IntelliJ IDEA, open the cloned mod folder, and run gradle task `ideaSyncTask` to generate run configurations for IDEA. Alternatively you can run gradle task `runClient` to start the game.
 * For VSCode, you have to open the cloned mod folder, and run gradle task `vscode` to generate launch tasks for VSCode. Alternatively you can run gradle task `runClient` to start the game.      
 * For Eclipse... ehh not really sure, but there is a gradle task for eclipse, called `eclipse`. I have no further info.
 
