@@ -1,12 +1,12 @@
 modLoader = "javafml"
-loaderVersion = "[47,)"
+loaderVersion = "[2,)"
 license = "All rights reserved" # https://choosealicense.com/
 
 
 # issueTrackerURL="https://github.com/invalid/pleasechangeme/issues"
 
 [[mods]]
-modId = "exampleaddon"
+modId = "${modId}"
 version = "${version}"
 displayName = "Example Addon"
 logoFile="icon.png"
@@ -16,23 +16,18 @@ description = '''
 Example KubeJS Addon.
 '''
 
-[[dependencies.exampleaddon]]
+# In your dependencies, if you use a variable like this to reference your modId, you will get errors!
+# Don't worry, they are totally harmless!
+[[dependencies.${modId}]]
 modId = "neoforge"
-mandatory = true
+type = "required"
 versionRange = "[20.4,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.exampleaddon]]
-modId = "minecraft"
-mandatory = true
-versionRange = "[1.20.4,)"
-ordering = "NONE"
-side = "BOTH"
-
-[[dependencies.exampleaddon]]
+[[dependencies.${modId}]]
 modId = "kubejs"
-mandatory = true
-versionRange = "[2004.7.0,)"
+type = "required"
+versionRange = "[2004.7,)"
 ordering = "NONE"
 side = "BOTH"

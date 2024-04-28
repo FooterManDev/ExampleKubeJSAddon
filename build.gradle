@@ -1,5 +1,5 @@
 plugins {
-    id "dev.architectury.loom" version "1.6.+"
+    id "dev.architectury.loom" version "1.5-SNAPSHOT"
     id "maven-publish"
 }
 
@@ -12,6 +12,9 @@ group = project.maven_group
 
 loom {
     silentMojangMappingsLicense()
+    interfaceInjection {
+        interfaceInjectionSourceSets.add sourceSets.main
+    }
 }
 
 repositories {
@@ -50,9 +53,14 @@ dependencies {
 }
 
 processResources {
-    inputs.property "version", project.version
+    def toReplace = [
+            "version" : project.version,
+            "modId"   : mod_id,
+    ]
+
+    inputs.properties toReplace
     filesMatching("META-INF/mods.toml") {
-        expand "version": project.version
+        expand toReplace
     }
 }
 
@@ -62,7 +70,7 @@ compileJava {
 }
 
 java {
-    sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = targetCompatibility = '17'
     withSourcesJar()
 }
 
