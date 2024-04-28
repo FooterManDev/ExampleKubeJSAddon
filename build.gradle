@@ -1,5 +1,5 @@
 plugins {
-    id "dev.architectury.loom" version "1.3-SNAPSHOT"
+    id "dev.architectury.loom" version "1.6.+"
     id "maven-publish"
 }
 
@@ -10,20 +10,16 @@ base {
 version = project.mod_version
 group = project.maven_group
 
-java {
-    sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
-}
-
 loom {
     silentMojangMappingsLicense()
-    forge {
-        mixinConfigs = [
-                "exampleaddon.mixins.json"
-        ]
-    }
 }
 
 repositories {
+    maven {
+        name = "Neo's Maven (Neoforge)"
+        url = "https://maven.neoforged.net/releases"
+    }
+
     maven {
         name = "Dan's Maven (Architectury)"
         url = "https://maven.architectury.dev"
@@ -45,16 +41,12 @@ dependencies {
     /* MC Dependencies */
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings loom.officialMojangMappings()
-    forge "net.minecraftforge:forge:${project.forge_version}"
+    neoForge("net.neoforged:neoforge:${neo_version}")
 
     /* Kube Dependencies */
-    modImplementation("dev.latvian.mods:kubejs-forge:${kjs_ver}")
-    modRuntimeOnly("dev.latvian.mods:rhino-forge:${rhino_ver}")
-    modRuntimeOnly("dev.architectury:architectury-forge:${arch_ver}")
-
-    /* These extras are !required! for KubeJS to work! */
-    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.3.2"))
-    implementation(include("io.github.llamalad7:mixinextras-forge:0.3.2"))
+    modImplementation("dev.latvian.mods:kubejs-neoforge:${kjs_ver}")
+    modRuntimeOnly("dev.latvian.mods:rhino-neoforge:${rhino_ver}")
+    modRuntimeOnly("dev.architectury:architectury-neoforge:${arch_ver}")
 }
 
 processResources {
@@ -64,12 +56,13 @@ processResources {
     }
 }
 
-tasks.withType(JavaCompile) {
+compileJava {
     options.encoding = "UTF-8"
-    options.release = 17
+    options.release.set(17)
 }
 
 java {
+    sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
     withSourcesJar()
 }
 
