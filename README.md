@@ -4,7 +4,7 @@
 Basically just a quick mod template for KubeJS Addon Mods. I got annoyed setting up new mods for Kube so often, so thats why I made it. Yeah, I'll add more versions later.
 If you're looking to learn how to make a KubeJS Addon, well you're not *really* in the right place, but I'll help you with the basics.
 
-* Uses Arch Loom - 1.5 🧵️ ![![](https://assets.digitalocean.com/articles/alligator/boo.svg)]
+* Uses Arch Loom - 1.5 🧵️
 * NeoForge 20.4.223 
 * KubeJS Version - 7.0-build.16 🟣
 * Rhino Version - 2.3-build.4 🦏️
