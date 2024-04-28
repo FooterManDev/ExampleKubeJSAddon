@@ -6,7 +6,7 @@ If you're looking to learn how to make a KubeJS Addon, well you're not *really* 
 
 * Uses Arch Loom - 1.5 🧵️
 * NeoForge 20.4.223 ⚒️
-* KubeJS Version - 7.0-build.16 🟣
+* KubeJS Version - 7.0-build.16 ![](https://raw.githubusercontent.com/FooterManDev/footers-assets/main/kjs12.svg "Kjs.svg")
 * Rhino Version - 2.3-build.4 🦏️
 * Architectury - 11.1.17 🏗️
 
