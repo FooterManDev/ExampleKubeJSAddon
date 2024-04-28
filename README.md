@@ -1,4 +1,6 @@
 ## Example KubeJS Addon
+### **1.20.1 Forge**
+
 Basically just a quick mod template for KubeJS Addon Mods. I got annoyed setting up new mods for Kube so often, so thats why I made it. Yeah, I'll add more versions later.
 If you're looking to learn how to make a KubeJS Addon, well you're not *really* in the right place, but I'll help you with the basics.
 
