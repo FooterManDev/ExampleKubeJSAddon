@@ -19,7 +19,7 @@ or you can clone it using your terminal:
 ```
 git clone --branch minecraftversion https://github.com/FooterManDev/ExampleKubeJSAddon
 ```
-`minecraftversion` being 1.20.1, 1.19.2, etc, plus modloader. I only have 1.20.1 Forge on here right now.
+`minecraftversion` being 1.20.1, 1.20.4, etc, plus modloader. This repo has 1.20.1 and 1.20.4 branches.
 
 Alternatively if you use an IDE that supports generating projects from templates, you can clone it that way.
 
