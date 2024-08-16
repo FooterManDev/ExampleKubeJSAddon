@@ -1,9 +1,10 @@
 package com.example.exampleaddon.kubejs;
 
 import com.example.exampleaddon.ExampleAddon;
-import dev.latvian.mods.kubejs.KubeJSPlugin;
+import dev.latvian.mods.kubejs.plugin.KubeJSPlugin;
 
-public class ExampleKubeJSPlugin extends KubeJSPlugin {
+public class ExampleKubeJSPlugin implements KubeJSPlugin
+{
     /* Basic example of a KubeJS Plugin.
        To register your own plugins, add this class and package name to "kubejs.plugins.txt" in your Resources directory.
     */

@@ -1,6 +1,11 @@
 plugins {
-    id "dev.architectury.loom" version "1.3-SNAPSHOT"
     id "maven-publish"
+    id 'java-library'
+    id 'net.neoforged.moddev' version '1.0.17'
+}
+
+tasks.named('wrapper', Wrapper).configure {
+    distributionType = Wrapper.DistributionType.ALL
 }
 
 base {
@@ -11,15 +16,37 @@ version = project.mod_version
 group = project.maven_group
 
 java {
-    sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = targetCompatibility = JavaVersion.VERSION_21
 }
 
-loom {
-    silentMojangMappingsLicense()
-    forge {
-        mixinConfigs = [
-                "exampleaddon.mixins.json"
-        ]
+neoForge {
+    version = project.neo_version
+    accessTransformers {
+        publish(project.file('src/main/resources/META-INF/accesstransformer.cfg'))
+    }
+
+
+    runs {
+        configureEach {
+            logLevel = org.slf4j.event.Level.INFO
+        }
+
+        client {
+            client()
+
+            gameDirectory = file 'run'
+        }
+
+        server {
+            server()
+            programArgument('--nogui')
+            gameDirectory = file 'server'
+        }
+    }
+
+    parchment {
+        minecraftVersion = parchment_mc_version
+        mappingsVersion = parchment_mapping_version
     }
 }
 
@@ -39,38 +66,31 @@ repositories {
             includeGroup "dev.latvian.mods"
         }
     }
+    maven {url = "https://maven.saps.dev/minecraft"}
 }
 
 dependencies {
-    /* MC Dependencies */
-    minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings loom.officialMojangMappings()
-    forge "net.minecraftforge:forge:${project.forge_version}"
-
     /* Kube Dependencies */
-    modImplementation("dev.latvian.mods:kubejs-forge:${kjs_ver}")
-    modRuntimeOnly("dev.latvian.mods:rhino-forge:${rhino_ver}")
-    modRuntimeOnly("dev.architectury:architectury-forge:${arch_ver}")
-
-    /* These extras are !required! for KubeJS to work! */
-    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.3.2"))
-    implementation(include("io.github.llamalad7:mixinextras-forge:0.3.2"))
+    implementation("dev.latvian.mods:kubejs-neoforge:${kjs_ver}")
+    runtimeOnly("dev.latvian.mods:rhino:${rhino_ver}")
+    runtimeOnly("dev.architectury:architectury-neoforge:${arch_ver}")
 }
 
 processResources {
     inputs.property "version", project.version
-    filesMatching("META-INF/mods.toml") {
+    filesMatching("META-INF/neoforge.mods.toml") {
         expand "version": project.version
     }
 }
 
-tasks.withType(JavaCompile) {
-    options.encoding = "UTF-8"
-    options.release = 17
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    withSourcesJar()
 }
 
-java {
-    withSourcesJar()
+compileJava {
+    options.encoding = 'UTF-8'
+    options.release.set(21)
 }
 
 jar {
