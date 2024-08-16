@@ -1,4 +1,4 @@
-## Example KubeJS Addon
+## Example KubeJS Addon (UNFINISHED FOR 1.21)
 ### **1.21 NeoForge**
 
 [Will eventually come to 1.21.1/2]
