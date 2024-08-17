@@ -22,7 +22,7 @@ or you can clone it using your terminal:
 ```
 git clone --branch minecraftversion https://github.com/FooterManDev/ExampleKubeJSAddon
 ```
-`minecraftversion` being 1.20.1, 1.20.4, 1.21, etc, plus modloader. This repo has 1.20.1 and 1.20.4 branches.
+`minecraftversion` being 1.20.1, 1.20.4, 1.21, etc, plus modloader. This repo has 1.20.1, 1.20.4 and 1.21.1 branches.
 
 Alternatively if you use an IDE that supports generating projects from templates, you can clone it that way.
 
@@ -37,8 +37,15 @@ After cloning, you can remove the `.git` directory from the mod to initialize yo
 
 ### For newbies
 I assume you have come across my repo to make a quick addon mod for Kube. Here's how KubeJS integration is set-up:      
-In this mod, there is a class here: [ExampleKubeJSPlugin](https://github.com/FooterMan15/ExampleKubeJSAddon/blob/master/src/main/java/com/example/exampleaddon/kubejs/ExampleKubeJSPlugin.java)                             
-This is the Plugin class. There you will apply your KubeJS integrations. I won't tell you how to create your integrations, read KubeJS's [README](https://github.com/KubeJS-Mods/KubeJS/blob/2002/README.md#creating-a-plugin).             
+In this mod, there is a class here: [ExampleKubeJSPlugin](https://github.com/FooterManDev/ExampleKubeJSAddon/blob/1.21-NeoForge/src/main/java/com/example/exampleaddon/kubejs/ExampleKubeJSPlugin.java)                             
+This is the Plugin class. There you will apply your KubeJS integrations. I will eventually make a Wiki for working with KubeJS in a Mod. I do not recommend reading KubeJS's README, due to it being outdated past 1.19.            
 You have to register your Plugin to Kube, otherwise nothing will happen. To do this, get your Plugin Class's full path (For example, `com.example.exampleaddon.kubejs.ExampleKubeJSPlugin`), and add it to the [kubejs.plugins.txt](https://github.com/FooterMan15/ExampleKubeJSAddon/blob/master/src/main/resources/kubejs.plugins.txt) file.
+
+### Common issues!
+**Plugin doesn't register with Kube?** \
+If you're unsure if your Plugin is not registering with Kube, you can go to the `run` directory, and open Kube's `startup.log`, located at `/logs/kubejs/`. If your Plugin doesn't show up there, it didn't register.
+A common reason for this, is you used slashes (/) when adding your plugin to `kubejs.plugins.txt`. This doesn't work, use periods (.) instead. \
+If that's not the issue, check the console in your IDE for errors.
+
 
 Alright, now go play with KubeJS.
