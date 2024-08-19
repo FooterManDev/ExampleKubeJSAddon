@@ -5,7 +5,7 @@ plugins {
 }
 
 tasks.named('wrapper', Wrapper).configure {
-    distributionType = Wrapper.DistributionType.ALL
+    distributionType = Wrapper.DistributionType.BIN
 }
 
 base {
@@ -35,6 +35,7 @@ neoForge {
             client()
 
             gameDirectory = file 'run'
+            systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
         }
 
         server {
@@ -44,10 +45,22 @@ neoForge {
         }
     }
 
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+        }
+    }
+
     parchment {
         minecraftVersion = parchment_mc_version
         mappingsVersion = parchment_mapping_version
     }
+}
+
+sourceSets.main.resources {srcDir("src/generated/resources")}
+
+configurations {
+    runtimeClasspath.extendsFrom localRuntime
 }
 
 repositories {
@@ -106,6 +119,7 @@ jar {
         ])
     }
 }
+
 
 publishing {
     publications {
