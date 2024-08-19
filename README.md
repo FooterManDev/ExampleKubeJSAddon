@@ -42,5 +42,5 @@ If you're unsure if your Plugin is not registering with Kube, you can go to the 
 A common reason for this, is you used slashes (/) when adding your plugin to `kubejs.plugins.txt`. This doesn't work, use periods (.) instead. \
 If that's not the issue, check the console in your IDE for errors.
 
-
+---
 Alright, now go play with KubeJS.
