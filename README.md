@@ -1,15 +1,12 @@
-## Example KubeJS Addon (UNFINISHED FOR 1.21)
-### **1.21 NeoForge**
-
-[Will eventually come to 1.21.1/2]
-
+## Example KubeJS Addon
+### **1.21.1 NeoForge**
 
 Basically just a quick mod template for KubeJS Addon Mods. I got annoyed setting up new mods for Kube so often, so thats why I made it. Yeah, I'll add more versions later.
 If you're looking to learn how to make a KubeJS Addon, well you're not *really* in the right place, but I'll help you with the basics.
 
 * Uses ModDevGradle - 1.0.17
 * MC Version 1.21 - NeoForge 21.1.12 🔨️
-* Kube Version - 7.0-build.119 🟪️
+* Kube Version - 7.0-build.131 🟪️
 * Rhino Version - 2.5-build.46 🦏️
 * Architectury - 13.0.6 🏗️
 
