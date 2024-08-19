@@ -84,9 +84,8 @@ repositories {
 
 dependencies {
     /* Kube Dependencies */
-    implementation("dev.latvian.mods:kubejs-neoforge:${kjs_ver}")
-    runtimeOnly("dev.latvian.mods:rhino:${rhino_ver}")
-    runtimeOnly("dev.architectury:architectury-neoforge:${arch_ver}")
+    implementation(accessTransformers(interfaceInjectionData("dev.latvian.mods:kubejs-neoforge:${kjs_ver}")))
+
 }
 
 processResources {
