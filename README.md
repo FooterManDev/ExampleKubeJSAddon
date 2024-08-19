@@ -7,8 +7,6 @@ If you're looking to learn how to make a KubeJS Addon, well you're not *really* 
 * Uses ModDevGradle - 1.0.17
 * MC Version 1.21 - NeoForge 21.1.12 🔨️
 * Kube Version - 7.0-build.131 🟪️
-* Rhino Version - 2.5-build.46 🦏️
-* Architectury - 13.0.6 🏗️
 
 #
 ### Basic how-to
