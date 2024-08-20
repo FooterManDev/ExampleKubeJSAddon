@@ -67,9 +67,6 @@ repositories {
     maven {
         name = "Lat's Maven (Rhino, KubeJS)"
         url = "https://maven.saps.dev/minecraft"
-        content {
-            includeGroup "dev.latvian.mods"
-        }
     }
 }
 
