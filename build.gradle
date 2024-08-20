@@ -65,21 +65,12 @@ configurations {
 
 repositories {
     maven {
-        name = "Dan's Maven (Architectury)"
-        url = "https://maven.architectury.dev"
-        content {
-            includeGroup "dev.architectury"
-        }
-    }
-
-    maven {
         name = "Lat's Maven (Rhino, KubeJS)"
         url = "https://maven.saps.dev/minecraft"
         content {
             includeGroup "dev.latvian.mods"
         }
     }
-    maven {url = "https://maven.saps.dev/minecraft"}
 }
 
 dependencies {
