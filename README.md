@@ -5,8 +5,8 @@ Basically just a quick mod template for KubeJS Addon Mods. I got annoyed setting
 If you're looking to learn how to make a KubeJS Addon, well you're not *really* in the right place, but I'll help you with the basics.
 
 * Uses ModDevGradle - 2.0.78
-* MC Version 1.21 - NeoForge 21.1.12 🔨️
-* Kube Version - 7.0-build.131 🟪️
+* MC Version 1.21 - NeoForge 21.1.169 🔨️
+* Kube Version - 7.1-build.181 🟪️
 
 #
 ### Basic how-to
