@@ -68,6 +68,13 @@ repositories {
         name = "Lat's Maven (Rhino, KubeJS)"
         url = "https://maven.latvian.dev/releases"
     }
+    // This is needed for an animated gif lib... Don't know why something requires it.
+    maven {
+        url 'https://jitpack.io'
+        content {
+            includeGroup "com.github.rtyley"
+        }
+    }
 }
 
 dependencies {
