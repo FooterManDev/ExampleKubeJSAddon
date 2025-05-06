@@ -66,7 +66,7 @@ configurations {
 repositories {
     maven {
         name = "Lat's Maven (Rhino, KubeJS)"
-        url = "https://maven.saps.dev/minecraft"
+        url = "https://maven.latvian.dev/releases"
     }
 }
 
