@@ -1,10 +1,8 @@
 [plugins]
-kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin"}
-loom   = { id = "dev.architectury.loom", version.ref = "loom" }
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+cloche = { id = "earth.terrarium.cloche",   version.ref = "cloche" }
 
 [libraries]
-minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
-forge     = { module = "net.minecraftforge:forge", version.ref = "forge" }
 kubejs    = { module = "dev.latvian.mods:kubejs-forge", version.ref = "kubejs" }
 mixinextras-common = { module = "io.github.llamalad7:mixinextras-common", version.ref = "mixinextras" }
 mixinextras-forge  = { module = "io.github.llamalad7:mixinextras-forge", version.ref = "mixinextras" }
@@ -13,10 +11,10 @@ kotlinforforge     = { module = "thedarkcolour:kotlinforforge", version.ref = "k
 
 [versions]
 kotlin = "2.2.0"
-loom   = "1.10-SNAPSHOT"
+cloche = "0.11.20"
 
 minecraft      = "1.20.1"
-forge          = "1.20.1-47.4.0"
+forge          = "47.4.0"
 kubejs         = "2001.6.5-build.16"
 mixinextras    = "0.3.2"
 kotlinforforge = "4.11.0"
