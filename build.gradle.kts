@@ -29,11 +29,14 @@ version = modVersion
 group = mavenGroup
 
 repositories {
+    cloche.librariesMinecraft()
+    mavenCentral()
+
     /* Cloche */
     cloche {
         main()
         mavenForge()
-        librariesMinecraft()
+        mavenParchment()
     }
 
     /* KubeJS */
@@ -43,21 +46,24 @@ repositories {
         content { includeGroup("dev.latvian.mods") }
     }
 
+    maven {
+        name = "Architectury Maven (For KubeJS)"
+        url = uri("https://maven.architectury.dev")
+        content { includeGroup("dev.architectury") }
+    }
+
     /* KotlinForForge */
     maven {
         name = "DarkColour's Maven (KotlinForForge)"
         url  = uri("https://thedarkcolour.github.io/KotlinForForge/")
         content { includeGroup("thedarkcolour") }
     }
-
-    /* Other */
-    mavenCentral()
 }
 
 dependencies {
     /* KubeJS */
     compileOnly(mod.mixinextras.common)
-    annotationProcessor(mod.mixinextras.common) // MixinExtras is set this way due to Gradle not supporting its own catalog system.
+    annotationProcessor(mod.mixinextras.common)
     implementation(mod.mixinextras.forge)
 
     /* Kotlin */
@@ -100,7 +106,12 @@ cloche {
             }
 
             /* Gradle dependencies */
-            dependencies { }
+            dependencies {
+                modCompileOnly(mod.mixinextras.common)
+                modImplementation(mod.mixinextras.forge)
+                modImplementation(mod.kotlinforforge)
+                modImplementation(mod.kubejs)
+            }
 
             runs {
                 client()
